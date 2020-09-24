@@ -3,6 +3,7 @@ import './App.css';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import DesignPage from './pages/DesignPage';
+import Footer from './components/Footer';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
@@ -41,7 +42,7 @@ class App extends React.Component {
     return (
       <Router>
         <Container className="p-0" fluid={true}>
-        <Navbar className="border-bottom" bg="transparent" fluid={true}>
+        <Navbar sticky="top" className="border-bottom" bg="white" fluid={true}>
             <Navbar.Brand>{this.state.title}</Navbar.Brand>
             <Nav className="ml-auto">
               {this.state.headerLinks.map(item => {
@@ -59,6 +60,7 @@ class App extends React.Component {
           <Route path='/about' exact render={() => <AboutPage />} />
           <Route path='/design' exact render={() => <DesignPage />} />
         </Container>
+        <Footer />
       </Router>
     );
   }
