@@ -1,5 +1,8 @@
 import React from 'react';
 import './App.css';
+import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
+import DesignPage from './pages/DesignPage';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
@@ -18,8 +21,8 @@ class App extends React.Component {
       ],
 
       home: {
-        title: 'Title',
-        subtitle: 'subtitle',
+        title: 'Solving Problems With Code',
+        subtitle: 'I never thought it could be this fun.',
         projects: 'projects below'
       },
 
@@ -37,19 +40,24 @@ class App extends React.Component {
   render() {
     return (
       <Router>
-        <Navbar bg="dark">
-            <Nav className="mr-auto">
+        <Container className="p-0" fluid={true}>
+        <Navbar className="border-bottom" bg="transparent" fluid={true}>
+            <Navbar.Brand>{this.state.title}</Navbar.Brand>
+            <Nav className="ml-auto">
               {this.state.headerLinks.map(item => {
                 return (
                   <Nav.Link href={item.path}>{item.title}</Nav.Link>
+
                 )
               })}
+              
             </Nav>
 
           </Navbar>
-        <Container fluid={true}>
-          {this.state.title}
           
+          <Route path='/' exact render={() => <HomePage title={this.state.home.title} subtitle={this.state.home.subtitle}/>} />
+          <Route path='/about' exact render={() => <AboutPage />} />
+          <Route path='/design' exact render={() => <DesignPage />} />
         </Container>
       </Router>
     );
