@@ -33,7 +33,7 @@ class Carousel extends React.Component {
         {
           id: 2,
           title: 'Key Time',
-          subtitle: 'Asset management made simple for start-ups',
+          subtitle: 'Show vulnerable population and key workers the best times to go shopping',
           imgSrc: keytime,
           repo: 'https://github.com/Kefuri/hfh-groceries',
           deployed: 'http://hfh-groceries.herokuapp.com/',
