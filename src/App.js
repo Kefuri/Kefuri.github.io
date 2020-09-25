@@ -45,13 +45,9 @@ class App extends React.Component {
         <Navbar sticky="top" className="border-bottom" bg="white" fluid={true}>
             <Navbar.Brand>{this.state.title}</Navbar.Brand>
             <Nav className="ml-auto">
-              {this.state.headerLinks.map(item => {
-                return (
-                  <Nav.Link href={item.path}>{item.title}</Nav.Link>
-
-                )
-              })}
-              
+              <Link className="nav-link" to='/'>Home</Link>
+              <Link className="nav-link" to="/design">Design</Link>
+              <Link className="nav-link" to="/about">About Me</Link>
             </Nav>
 
           </Navbar>
