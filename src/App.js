@@ -40,7 +40,7 @@ class App extends React.Component {
   }
   render() {
     return (
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <Container className="p-0" fluid={true}>
         <Navbar sticky="top" className="border-bottom" bg="white" fluid={true}>
             <Navbar.Brand>{this.state.title}</Navbar.Brand>
@@ -57,8 +57,8 @@ class App extends React.Component {
           </Navbar>
           
           <Route path='/' exact render={() => <HomePage title={this.state.home.title} subtitle={this.state.home.subtitle}/>} />
-          <Route path='/about' exact render={() => <AboutPage title={this.state.about.title} />} />
-          <Route path='/design' exact render={() => <DesignPage title={this.state.design.title}/>} />
+          <Route path='/about' render={() => <AboutPage title={this.state.about.title} />} />
+          <Route path='/design' render={() => <DesignPage title={this.state.design.title}/>} />
         </Container>
         <Footer />
       </Router>
