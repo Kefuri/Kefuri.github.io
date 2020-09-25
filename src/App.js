@@ -28,8 +28,8 @@ class App extends React.Component {
       },
 
       design: {
-        title: 'Title',
-        description: 'Desc',
+        title: 'Design Work',
+        description: 'As a creative outlet, I took to Photoshop to make art pieces known on the internet as GFX. The few below are all from different years of my progress.',
         artwork: 'Art'
       },
 
@@ -58,7 +58,7 @@ class App extends React.Component {
           
           <Route path='/' exact render={() => <HomePage title={this.state.home.title} subtitle={this.state.home.subtitle}/>} />
           <Route path='/about' exact render={() => <AboutPage title={this.state.about.title} />} />
-          <Route path='/design' exact render={() => <DesignPage />} />
+          <Route path='/design' exact render={() => <DesignPage title={this.state.design.title}/>} />
         </Container>
         <Footer />
       </Router>

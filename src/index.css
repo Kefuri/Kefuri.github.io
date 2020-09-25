@@ -16,7 +16,20 @@ code {
   margin: 20px;
   /* padding-bottom: 15px; */
 }
+.tokyo-card-image {
+  border-radius: 10px;
+  box-shadow: 0px 0px 3px 1px #fc9700
+}
 
+.aesthetic-card-image {
+  border-radius: 10px;
+  box-shadow: 0px 0px 3px 1px #9b01fa
+}
+
+.halo-card-image {
+  border-radius: 10px;
+  box-shadow: 0px 0px 3px 1px #1173eb
+}
 .c-card-image {
   border-radius: 10px;
   width: 450px;
