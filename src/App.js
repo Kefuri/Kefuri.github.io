@@ -34,7 +34,7 @@ class App extends React.Component {
       },
 
       about: {
-        title: 'Title'
+        title: 'About Me'
       },
     }
   }
@@ -57,7 +57,7 @@ class App extends React.Component {
           </Navbar>
           
           <Route path='/' exact render={() => <HomePage title={this.state.home.title} subtitle={this.state.home.subtitle}/>} />
-          <Route path='/about' exact render={() => <AboutPage />} />
+          <Route path='/about' exact render={() => <AboutPage title={this.state.about.title} />} />
           <Route path='/design' exact render={() => <DesignPage />} />
         </Container>
         <Footer />
