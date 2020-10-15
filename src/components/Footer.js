@@ -1,4 +1,5 @@
 import React from 'react';
+import GitHubIconDark from '../assets/icons/GitHubIconSmall.png';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
@@ -13,7 +14,7 @@ function Footer(props) {
             Haydon Houghton
           </Col>
           <Col className="p-0 d-flex justify-content-end">
-            Check Out The GitHub
+            <a href='https://github.com/kefuri' target="_blank" rel="noopener noreferrer"><img src={GitHubIconDark} /></a>
           </Col>
         </Row>
 
